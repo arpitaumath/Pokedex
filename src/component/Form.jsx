@@ -10,13 +10,13 @@ const Form = () => {
     const data =  await fetchPokemon(name)
     dispatch({
       type:"GET_POKEMON",
-      payload : data
+      payload : data,
     })
     // console.log(data)
     setName("")
   }
   return (
-    <div className=' mx-32 my-4 p-5 border border-purple-900 rounded-md '>
+    <div className=' mx-32 my-4 p-5 border bg-white border-purple-900 rounded-md '>
       <h1 className='text-xl font-bold uppercase text-purple-900 text-center' >Search Any Pokemon Here</h1>
       <form onSubmit={handleSubmit}>
         <input type='text' placeholder='E.g Pikachu' onChange={(e) => setName(e.target.value)} value={name}

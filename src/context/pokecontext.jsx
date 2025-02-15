@@ -5,7 +5,7 @@ const pokecontext =createContext()
 
 export const PokeProvider = ({children}) =>{
     const initialState ={
-        pokemonDetails:[]
+        pokemonDetails:null,
     }
     const [state , dispatch]=useReducer(pokereducer,initialState)
 
